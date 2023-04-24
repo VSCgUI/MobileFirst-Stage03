@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  border-box: box-size;
+  padding: 0;
+}
+
+:root {
+  --ff-title: 'Staatliches', sans-serif;
+  --ff-paragraf: 'Palanquin', sans-serif;
+
+  --bg-color-header: hsl(218, 17%, 62%);
+  --bg-title: hsl(275, 18%, 79%);
+  --bg-body: hsl(233, 100%, 97%);
+  --bg-span: hsl(312, 91%, 96%);
+
+
+  --color-title: hsl(0, 0%, 100%);
+  --text-color: hsl(274, 84%, 12%);
+  --span-color: hsl(232, 17%, 35%);
+}
+
+body {
+  width: 24rem;
+  margin: auto;
+}
+
+header {
+  background: var(--bg-color-header);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+header img {
+  margin: 2rem auto 2.5rem;
+  object-fit: cover;
+}
+
+header h1 {
+  font-family: var(--ff-title);
+  color: var(--color-title);
+
+  background: var(--bg-title);
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 2.13rem;
+  letter-spacing: 0.06em;
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  margin-bottom: 2.25rem;
+  padding: 0.5rem 5.44rem;
+}
+
+main {
+  background: var(--bg-body);
+}
+
+main p {
+  font-family: var(--ff-paragraf);
+  font-size: 0.8rem;
+  line-height: 1rem;
+
+  color: var(--text-color);
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  margin: 0 2.7rem 3.93rem 2.25rem;
+  padding-top: 0.875rem;
+}
+
+main div {
+  margin: 2rem;
+  border-radius: 1.25rem;
+
+  position: relative;
+
+  animation-name:downtop;
+  animation-duration: 1S;
+}
+
+main div span {
+  width: 7rem;
+  background: var(--bg-span);
+  color: var(--span-color);
+
+  font-family: 'Staatliches', sans-serif;
+  font-size: 1.25rem;
+  line-height: 2.125rem;
+
+
+  border-radius: 1.25rem;
+  leeter-spacing: 0.05em;
+
+  position: absolute;
+  top: 1.06rem;
+  left: 12rem;
+
+  text-align: center;
+
+  animation-name:topdown;
+  animation-duration: 1S;
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
